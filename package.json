@@ -1,0 +1,19 @@
+{
+  "name": "js-kafka-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-env": "docker-compose up --force-recreate",
+    "start": "node",
+    "start-producer": "docker run -it --rm --network app -v `pwd`:/workspace node p.js",
+    "start-consumer": "docker run -it --rm --network app -v `pwd`:/workspace node c.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^1.15.0"
+  }
+}
